@@ -1,7 +1,7 @@
 # webfejlesztes12
 A webfejlesztés tárgy beadandója.
 
-Oldal készítője: Szabó Zsófia Anna
+Oldal készítője: Szabó Zsófia Anna,
 URL: https://szabozsofiaanna.github.io/webfejlesztes12/
 
 Weboldal témája: A weboldalam egy fiktív állatmenhely bemutatására készült. Célja, hogy információkat nyújtson az állatmenhely működéséről, a mentett állatok gondozásáról és az örökbefogadási lehetőségekről.
