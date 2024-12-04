@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.3;
+    text-align: justify;
+    color: black;
+    background-color: #f0f4f4;
+}
+.oldal {
+    margin: 30px 25px;
+}
+
+/* Fejléc*/
+header {
+    background-color: #082d40;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+header .logo {
+    width:40px;
+    height: auto;
+    border-radius:50%;
+}
+
+header .cegnev {
+    font-size: 22px;
+    margin-top: 10px;
+    font-family: "Julius Sans One";
+}
+
+nav.menu ul{
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+    display:flex;
+    flex-direction:column;
+}
+
+nav ul li{
+    margin:1%;
+}
+
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    background-color: #082d40;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#current{
+    font-weight: bold;
+    color:white;
+    background-color:#436f82;
+}
+
+
+/* Konténer a fő tartalomhoz */
+.container {
+    max-width: 100%;
+    margin: 0;
+    padding:0;
+}
+
+/* Kezdőoldal*/
+.kezdooldal h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.kezdooldal p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: rgb(43, 43, 43);
+}
+
+.fotoalbumcim{
+    margin:80px 0 0 0;
+}
+
+.velemenycim{
+    margin:120px 0 0 0;
+}
+
+/* Vélemények*/
+.velemenyek {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr; /*egyetlen oszlop - 1 fraction unit=rendelkezsre allo teret elfoglal egy grid elem*/
+    gap: 30px; /*oszlopok es sorok kozotti hely ha egy ertek- 1.sor/2.oszlop*/
+}
+
+.velemeny {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*1.vizszintes eltolas, 2.fuggoleges eltolas, 3.elmosodas merteke, 4.szin es attetszoseg*/
+}
+
+.velemenykep {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /*kitolti az egesz kontenert mikozben megorzi az ertekeit| ha a kontener es a kep aranyai elternek, akkor a kep egy resze levagodhat, de a kontenert kitolti| segitsegevel nem torzul a kep*/ 
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.velemenyp {
+    font-size: 12px;
+    color: #555;
+}
+
+/* ALLATAINK */
+.allatok {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top:50px;
+}
+
+.allat {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5%;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.shortp {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 15px;
+    align-items:center; /*fuggoleg kozepre igazitas*/
+}
+
+.bal, .jobb {
+    flex-basis: 48%; /*teljes teret kitoltik a flexboxban*/
+    text-align:center;
+}
+
+.shortp ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.longp {
+    padding: 10px;
+    text-align: justify;
+    margin-top: 1px;
+}
+
+.allat img.animalimage {
+    width: 100%; /*meg van adva a 48% flex-basis mar a .bal.jobbnal*/
+    height: auto;
+    object-fit: cover;
+    border-radius: 15%;
+}
+
+
+/* Fogadj orokbe gomb */
+a.orokbefogadasgomb {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #082d40;
+    color: white;
+    text-decoration: none;
+    font-size: 10px; /*gomb meretet is szabalyozza a benne levo tartalom miatt*/
+    font-weight: bold;
+    text-align: center;
+}
+
+a.orokbefogadasgomb:active { /*nyomas pillanataban*/
+    transform: translateY(1px); /*a pozitiv ertek lefele mozditja*/
+}
+
+/*KI A LELKI TÁRSAD KVÍZ*/
+.quiz-container {
+    max-width: 90%; /*margint tartalmazza*/
+    margin: 30px auto; /*jobbra balra auto, azaz automatikusan elosztja, hogy kozepre keruljon az elem*/
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /*vizszint, fuggoleg, elmosodas, szin-attetsz*/
+}
+
+.quiz-container h1 {
+    font-size: 2rem;
+    color: #082d40;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.question { /*kerdeseket es valaszokat is tartalmazza*/
+    margin-bottom: 25px;
+    display:flex; 
+    flex-direction:column /*valaszok egymas alatt jelennek meg*/
+}
+
+.question p { /*szamozott kerdesek*/
+    font-size: 1.2rem;
+    color: #01155c;
+    margin-bottom: 10px;
+}
+
+.question label {
+    font-size: 1rem;
+    color: #393939;
+    margin:0;
+}
+
+.quizbutton {
+    background-color: #082d40;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border:none;
+    font-size: 1.2em;
+    margin-top: 20px;
+    width:100%;
+    display:block; /*ebben az esetben nincs ertelme a width miatt_csak feljebb ujrik*/
+}
+
+.quizbutton:hover {
+    background-color: #436f82;
+}
+
+#result {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+    font-weight:bold;
+    display:block;
+    width:100%;
+}
+
+/*TUDNIVALOK*/
+.tudnivalok{
+    display:flex;
+    flex-direction: column;
+}
+
+.intro {
+    background-color: #082d40;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 30px 0 20px 0;
+}
+
+.introcim {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align:left;
+}
+
+.szeretet{
+    flex-basis: 100%;
+}
+
+.tudnivalo {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.elsotudnivalo{
+    margin-top:20px;
+}
+
+.tudnivalo h2.knowtitle {
+    font-size: 1.5rem;
+    color: #082d40;
+    margin-bottom: 10px;
+}
+
+.tudnivalo ol {
+    list-style-type: circle;
+    padding-left: 20px;
+    margin-top:8px;
+}
+
+
+/*ŰRLAP*/
+h2.info{
+    margin:20px 0 5px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block; /*kulonben elvalasztja hogy Teljes|név(sor ket szelere kerul)*/
+    font-size: 1.1em;
+    color: #333;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="datetime-local"], select, textarea {
+    padding: 12px;
+    width:100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: #082d40;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #436f82;
+}
+
+label.error {
+    color: #e90101;
+    }
+
+/* Footer*/
+footer {
+    background-color: #082d40;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    margin-top:20px;
+}
+
+/* Media Queries*/
+@media (min-width: 600px) {
+    nav.menu ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    header .logo {
+        width: 50px;
+    }
+
+    header .cegnev {
+        font-size: 28px;
+    }
+
+    .kezdooldal h2 {
+        font-size: 24px;
+    }
+
+    .kezdooldal p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    header .logo {
+        width: 60px;
+    }
+
+    header .cegnev {
+        font-size: 36px;
+    }
+
+    .menu ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .velemenyek {
+        grid-template-columns: repeat(3, 1fr); /*=grid-template-columns: 1fr 1fr 1fr;*/
+    }
+
+    .velemeny {
+        padding: 20px; /*15pxrol lett megvaltoztatva*/
+    }
+
+    .velemenykep {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .form-actions input[type="submit"], .form-actions input[type="reset"] {
+        width: 48%;
+    }
+
+    .allatok {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .allat { /*egy allatrol szolo flexbox*/
+        width: 48%;
+    }
+}
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Szabó Zsófia Anna">
+    <meta name="description" content="A Kuckó Állatmenhely biztonságos menedéket biztosít kutyáknak és macskáknak. Segítsen nekünk egy állat életét jobbá tenni az örökbefogadással!">
+
+    <link rel="icon" href="kepek/logo/favicon-2/favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="animalstyle3.css" rel="stylesheet">
+
+    <script src="kepalbum/jquery/jquery-3.7.1.js"></script>
+    <script src="validalas/jquery-validation-1/dist/jquery.validate.js"></script>
+
+<script>
+$(document).ready(function() {
+ $("#myform").validate({
+
+    rules: {
+    fullName: {required: true},
+    email: {required: true, email: true},
+    phone: {required: true},
+    dateFor: {required: true},
+    adoptionTerms: {required: true},
+    animalType: {required: true}
+            },
+
+    messages: {
+    fullName: "Írja be a teljes nevét!",
+    email: {required: "Kérem adja meg email címét!",
+            email: "Nem érvényes az email cím!"
+    },
+    phone: {required: "Kérem adja meg a telefonszámát!"},
+    dateFor: {required: "Kérem válasszon időpontot egyeztetéshez!"},
+    adoptionTerms: {required: "Kérem fogadja el a szabályzatot!"},
+    animalType: {required: "Kérem válasszon állatot"},
+}
+            });
+        });
+    </script>
+
+    <title>Kuckó Állatmenhely</title>
+</head>
+
+
+
+<body>
+    <header>
+        <img src="kepek/logo/logo.png" alt="A cég logója" class="logo">
+        <h1 class="cegnev">Kuckó Állatmenhely</h1>
+    </header>
+
+    <div class="container">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="allataink.html">Állataink</a></li>
+                <li><a href="tudnivalok.html">Tudnivalók</a></li>
+                <li><a href="orokbefogadas.html" id="current">Örökbefogadás</a></li>
+            </ul>
+        </nav>
+<div class="oldal">
+        <div class="form-container">
+            <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" id="myform" novalidate>
+                <h2 class="info">Kapcsolati információk</h2>
+                <div class="form-group">
+                    <label for="fullName">Teljes név:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Kovács Benedek">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email cím:</label>
+                    <input type="email" id="email" name="email" placeholder="katica@gmail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefonszám:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+36205473579">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Időpont egyeztetésre:</label>
+                    <input type="datetime-local" id="date" name="dateFor">
+                </div>
+
+                <h2 class="info">Örökbefogadással kapcsolatos kérdések</h2>
+                <div class="form-group">
+                    <label for="animalType">Melyik állatot szeretné örökbefogadni?</label>
+                    <select id="animalType" name="animalType">
+                        <option value="" disabled selected>Válassz egyet...</option>
+                        <option value="Oscar">Oscar</option>
+                        <option value="Csoki">Csoki</option>
+                        <option value="Max">Max</option>
+                        <option value="Gyomber">Gyömbér</option>
+                        <option value="Rosie">Rosie</option>
+                        <option value="Kokusz">Kókusz</option>
+                        <option value="Zizi">Zizi</option>
+                        <option value="Dojli">Dojli</option>
+                        <option value="Fifi">Fifi</option>
+                        <option value="Cirmos">Cirmos</option>
+                        <option value="sztracsatella">Sztracsatella</option>
+                        <option value="Kiko">Kiko</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Miért szeretne örökbefogadni?</label>
+                    <textarea id="reason" name="reason" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Van tapasztalata házikedvenc tartásában?</label>
+                    <label for="experienceYes"><input type="radio" id="experienceYes" name="experience" value="yes" > Igen</label>
+                    <label for="experienceNo"><input type="radio" id="experienceNo" name="experience" value="no"> Nem</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="petsyet">Hány házikedvence volt élete során</label>
+                    <input type="number" name="petsyet" id="petsyet" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="adoptionTerms">
+                        <input type="checkbox" id="adoptionTerms" name="adoptionTerms">Elfogadom az örökbefogadási szabályokat.
+                    </label>
+                </div>
+
+                <input type="submit" value="Elküldés" name="elkuldes">
+                <input type="reset" value="Alaphelyzet" name="alaphelyzet">
+            </form>
+        </div>
+    </div>
+</div>
+    <footer>
+        EZ A WEBOLDAL KIZÁRÓLAG TANULÁSI CÉLOKRA KÉSZÜLT.<br>
+        Elérhetőségeink: +36 70 111 1111<br>
+        kuckoallatmenhely@gmail.com
+    </footer>
+</body>
+</html>
